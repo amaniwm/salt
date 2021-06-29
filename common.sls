@@ -3,19 +3,13 @@ install commonpackages:
     - pkgs:
       - deltarpm
       - chrony
-      - iptables-services
       - unbound
-      - java-11-openjdk-devel
+
   
 chronyd:
   service.running:
     - enable: True
     - reload: True 
-
-iptables:
-  service.running:
-    - enable: True
-    - reload: True
 
 unbound:
   service.running:
